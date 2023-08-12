@@ -1,0 +1,7 @@
+@function color-set($color, $opacity: false) {
+  @if $opacity {
+    @return RGB($color, $opacity);
+  }
+
+  @return RGB($color);
+}

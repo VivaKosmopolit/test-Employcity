@@ -1,0 +1,14 @@
+$desktop: 1172px;
+//$ipad: 1023px;
+//$tablet: 767px;
+//$mobile: 640px;
+//$mobile-small: 419px;
+
+@mixin container {
+  width: 100%;
+  max-width: $desktop;
+  --padding: 40px;
+  margin: 0 auto;
+  padding: 0 var(--padding);
+  box-sizing: border-box;
+}

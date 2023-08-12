@@ -1,0 +1,16 @@
+@import "../helpers/color-function";
+
+$color-white: var(--color-white, (255,255,255));
+$color-light-gray: var(--color-light-gray, (187,187,187));
+$color-slim-gray: var(--color-slim-gray, (190,190,193));
+$color-gray: var(--color-gray, (195,195,195));
+$color-dark-gray: var(--color-dark-gray, (111,109,123));
+$color-deep-dark: var(--color-deep-dark, (39,39,51));
+$color-black: var(--color-color-black, (0,0,0));
+$color-bright-blue: var(--color-bright-blue, (62,156,220));
+$color-brighter-blue: var(--color-brighter-blue, (66,169,237));
+$color-dark-blue: var(--color-dark-blue, (40,102,144));
+$color-dark-blue2: var(--color-dark-blue2, (42,43,48));
+$color-dark-blue3: var(--color-dark-blue3, (61,64,80));
+$color-dark-blue4: var(--color-dark-blue4, (39,39,51));
+$color-deep-dark-blue: var(--color-deep-dark-blue, (16,16,29));

@@ -1,0 +1,68 @@
+@import "./ui-type-setting-mixins";
+@import "../ui/ui-colors-var";
+
+@mixin ui-btn($type: main, $theme: main) {
+  @include ui-p();
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 183px;
+  padding: 12px 10px;
+  font-family: inherit;
+  text-decoration: none;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  white-space: nowrap;
+  outline: transparent;
+  color: color-set($color-dark-blue2);
+  cursor: pointer;
+  transition: all var(--animation-speed, 0.3s);
+
+  @if $type==with-border {
+    background-color: transparent;
+  }
+
+  @else if $type==with-icon {
+    .btn-icon {
+      --width: 16px;
+      display: inline-block;
+      flex-shrink: 0;
+      position: relative;
+      width: var(--width);
+      height: var(--width);
+      bottom: 1px;
+      margin-right: 10px;
+    }
+  }
+
+  @if $theme == main {
+    background-color: color-set($color-white);
+    border-color: color-set($color-light-gray);
+
+    &:hover {
+      background-color: color-set($color-white, .5);
+      border-color: color-set($color-light-gray, .5);
+    }
+
+    &:active {
+      background-color: color-set($color-white, .5);
+      border-color: color-set($color-light-gray, .5);
+    }
+  }
+
+  @else if $theme == main-blue {
+    color: color-set($color-white);
+    background-color: color-set($color-bright-blue);
+    border-color: color-set($color-white);
+
+    &:hover {
+      background-color: color-set($color-dark-blue);
+      border-color: color-set($color-white);
+    }
+
+    &:active {
+      background-color: color-set($color-dark-blue);
+      border-color: color-set($color-white);
+    }
+  }
+}

@@ -44,12 +44,13 @@ li {
 
 .header {
   width: 100%;
+  min-width: 1172px;
   min-height: 850px;
   background-image: url("../../assets/images/main-intro-image.png");
   background-repeat: no-repeat;
 
   &__navigation-wrapper {
-    z-index: 1;
+    z-index: 2;
     position: fixed;
     top: 0;
     left: 0;
@@ -146,6 +147,7 @@ li {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  min-width: 1172px;
   min-height: 850px;
   background-color: color-set($color-dark-blue4);
   background-image: url("../../assets/images/world.png");
@@ -171,7 +173,6 @@ li {
 
   &__steps-wrapper {
     display: flex;
-    flex-wrap: wrap;
     gap: 30px;
     margin-bottom: 90px;
   }
@@ -244,10 +245,6 @@ li {
     grid-template-rows: auto;
     gap: 30px;
     margin-bottom: 55px;
-    
-    @media screen and (max-width: 1240px) {
-      grid-template-columns: repeat(2, 370px);
-    }
   }
 
   &__range-counter {
@@ -341,16 +338,10 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
+  min-width: 1172px;
   height: 80px;
   gap: 0 80px;
   background-color: color-set($color-dark-blue3);
-
-  @media screen and (max-width: 1240px) {
-    flex-direction: column;
-    height: auto;
-    padding: 30px 0;
-    gap: 30px;
-  }
 
   &_rights {
     color: color-set($color-white);
@@ -371,10 +362,6 @@ li {
       --left-right: -40px;
       transform: translateY(-50%);
       background-color: color-set($color-gray);
-
-      @media screen and (max-width: 1240px) {
-        display: none;
-      }
     }
 
     &:before {
